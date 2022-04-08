@@ -1,0 +1,22 @@
+[class*="fm-heading"],
+.fm-eyebrow {
+  font-weight: $heading-font-weight;
+}
+.fm-heading-1 {
+  font-size: $text-heading-1-font-size;
+}
+.fm-heading-2 {
+  font-size: $text-heading-2-font-size;
+}
+.fm-text-medium {
+  font-size: $text-medium-font-size;
+}
+.fm-text-small {
+  font-size: $text-small-font-size;
+}
+.fm-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-text-subdued;
+  font-size: $text-small-font-size;
+}

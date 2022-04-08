@@ -1,0 +1,38 @@
+[class*="fm-flex-row"],
+[class*="fm-space-between"] {
+  display: flex;
+  align-items: center;
+}
+
+:where([class*="fm-space-between"]) {
+  justify-content: space-between;
+  gap: $spacing-32;
+}
+
+@media (max-width: $breakpoint-m) {
+  :where(.fm-space-between-responsive) {
+    flex-direction: column;
+  }
+}
+
+:where(.fm-flex-row) > :not(:last-child) {
+  margin-inline-end: $spacing-16;
+}
+
+:where(.fm-flex-row-0) > :not(:last-child) {
+  margin-inline-end: 0;
+}
+
+:where(.fm-flex-row-8) > :not(:last-child) {
+  margin-inline-end: $spacing-8;
+}
+
+.fm-flex-item {
+  flex: 1;
+}
+.fm-space-around {
+  justify-content: space-around;
+}
+.fm-justify-center {
+  justify-content: center;
+}

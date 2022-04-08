@@ -1,0 +1,84 @@
+:root {
+  font-family: sans-serif;
+  --switch-width: 2.75rem;
+  --switch-height: #{$spacing-24};
+  --switch-padding:#{$spacing-4};
+  --switch-color: #{$cyan-600};
+  --switch-glow: 0 0 8px #{$cyan-500};
+  --switch-knob-color: #{$white};
+  --switch-diameter: calc(var(--switch-height) - 2 * var(--switch-padding));
+  --switch-transform-dimension: calc(var(--switch-width) - var(--switch-diameter) - var(--switch-padding));
+}
+
+.fm-switch {
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  grid-gap: .75rem;
+  grid-template-columns: repeat(3, auto);
+  grid-template-areas: "label-one switch label-two";
+
+  label {
+    cursor: pointer;
+  }
+}
+
+.fm-switch input[type="radio"] {
+  cursor: pointer;
+  grid-area: switch;
+  appearance: none;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background: var(--switch-color);
+  border-radius: calc(var(--switch-height) / 2);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: var(--switch-glow);
+  }
+
+  &:focus {
+    outline: 1px solid dodgerblue;
+    outline-offset: 2px;
+  }
+
+  &:checked {
+    animation: fade-out .25s ease-in-out forwards;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  &:before {
+    content: "";
+    width: var(--switch-diameter);
+    height: var(--switch-diameter);
+    top: var(--switch-padding);
+    right: var(--switch-padding);
+    position: absolute;
+    background: #fff;
+    border-radius: calc(var(--switch-height) / 2 - var(--switch-padding));
+    transition: transform .25s ease-in-out;
+  }
+  
+  &:checked:before {
+    transform: translateX(calc(-1 * var(--switch-transform-dimension)));
+  }
+}
+
+.fm-switch input[type="radio"]:nth-of-type(2) {
+  background: var(--switch-color);
+  &:before {
+    left: var(--switch-padding);
+  }
+
+  &:checked:before {
+    transform: translateX(var(--switch-transform-dimension));
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}

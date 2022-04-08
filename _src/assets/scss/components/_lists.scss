@@ -1,0 +1,11 @@
+.fm-checklist {
+  li {
+    position: relative;
+    padding-left: calc(1em + #{$spacing-12});
+    background-image: $icon-checkmark;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: .75em;
+    color: $color-text-subdued;
+  }
+}

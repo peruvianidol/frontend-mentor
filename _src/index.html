@@ -1,0 +1,50 @@
+---
+layout: base
+---
+
+<header class="fm-text-center fm-inset-vertical-48">
+  <h1 class="fm-heading-2 fm-block-12">Simple, traffic-based pricing</h1>
+  <p class="fm-text-subdued fm-text-medium">Sign-up for our 30-day trial. <br class="fm-hide-on-large">No credit card required.</p>
+</header>
+
+<div class="fm-card fm-shadow-4">
+  <div class="fm-border-block-end fm-inset-stretch-24 fm-text-center">
+    <div class="fm-flex-row-0 fm-space-around fm-block-24">
+      <p class="fm-eyebrow">100k pageviews</p>
+      <p class="fm-hide-on-small fm-flex-row-8"><strong class="fm-heading-1">$16.00</strong> <span class="fm-text-subdued">/ month</span></p>
+    </div>
+
+    <input type="range" id="pageviews" name="pageviews" min="0" max="11" class="fm-input fm-margin-auto fm-block-24">
+
+    <p class="fm-hide-on-large fm-block-24"><strong class="fm-heading-1">$16.00</strong> <span>/ month</span></p>
+
+<!--
+https://adrianroselli.com/2019/08/under-engineered-toggles-too.html
+via @5t3ph
+-->
+
+    <div class="fm-flex-row fm-justify-center fm-text-subdued">
+
+      <div class="fm-switch">
+        <label for="monthly">Monthly Billing</label>
+        <input type="radio" checked id="monthly" name="payment" value="monthly">
+        <label for="yearly" class="fm-flex-row-8">
+          <span>Yearly Billing</span>
+          <span class="fm-pill-discount">-25% <span class="fm-hide-on-small">discount</span></span>
+        </label>
+        <input type="radio" id="yearly" name="payment" value="yearly">
+      </div>
+    </div>
+  </div>
+
+  <div class="fm-inset-stretch-24 fm-space-between-responsive">
+    <ul role="list" class="fm-checklist fm-flow-12">
+      <li>Unlimited websites</li>
+      <li>100% data ownership</li>
+      <li>Email reports</li>
+    </ul>
+
+    <button class="fm-button-cta">Start my trial</button>
+  </div>
+
+</div>

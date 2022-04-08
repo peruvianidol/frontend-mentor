@@ -1,0 +1,35 @@
+.fm-text-subdued {
+  color: $color-text-subdued;
+}
+
+.fm-text-center {
+  text-align: center;
+}
+
+.fm-hide-on-small {
+  display: none;
+}
+
+.fm-shadow-4 {
+  box-shadow: $shadow-elevation-4;
+}
+
+.fm-border-block-end {
+  border-block-end: $border-width-small solid $color-border-default;
+}
+
+.fm-margin-auto {
+  margin-inline: auto;
+}
+
+@media (min-width: $breakpoint-m) {
+  .fm-hide-on-large {
+    display: none;
+  }
+  .fm-hide-on-small:not([class*="fm-flex-row"]) {
+    display: initial;
+  }
+  [class*="fm-flex-row"].fm-hide-on-small {
+    display: flex;
+  }
+}

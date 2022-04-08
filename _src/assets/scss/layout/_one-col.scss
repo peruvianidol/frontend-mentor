@@ -1,0 +1,22 @@
+.fm-layout-one-col {
+  padding-inline: $spacing-24;
+  position: relative;
+  // background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 375 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H375V400H191.5C85.7375 400 0 314.263 0 208.5V0Z' fill='%23F1F5FE'/%3E%3C/svg%3E");
+  // background-repeat: no-repeat;
+  // background-size: 375px 400px;
+    &:before {
+      content: "";
+      display: block;
+      height: 400px;
+      width: 100%;
+      border-radius: 0 0 0 191px;
+      background-color: $blue-200;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+    }
+    > * {
+    max-width: var(--max-width, $container-s);
+    margin-inline: auto;
+  }
+}

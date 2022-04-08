@@ -1,0 +1,13 @@
+[class*="fm-pill"] {
+  display: inline-block;
+  border-radius: $border-radius-rounded;
+  font-size: $text-small-font-size;
+  padding: $spacing-2 $spacing-8;
+  background-color: $color-background-subdued;
+  color: $color-text-default;
+}
+
+.fm-pill-discount {
+  background-color: $color-background-discount;
+  color: $color-text-discount;
+}

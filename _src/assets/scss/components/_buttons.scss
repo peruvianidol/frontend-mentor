@@ -1,0 +1,13 @@
+.fm-button-cta {
+  font-size: $text-small-font-size;
+  font-weight: $font-weight-semibold;
+  color: $color-text-subdued-inverse;
+  background-color: $color-background-brand;
+  padding: $spacing-12 $spacing-48;
+  border-radius: $border-radius-rounded;
+  border: none;
+
+  &:hover {
+    color: $color-text-inverse;
+  }
+}

@@ -1,0 +1,19 @@
+.fm-flow-12 > :not(:last-child) {
+  margin-block-end: $spacing-12;
+}
+
+.fm-block-12 {
+  margin-block-end: $spacing-12;
+}
+.fm-block-24 {
+  margin-block-end: $spacing-24;
+}
+.fm-block-32 {
+  margin-block-end: $spacing-32;
+}
+.fm-inset-vertical-48 {
+  padding-block: $spacing-48;
+}
+.fm-inset-stretch-24 {
+  padding: $spacing-32 $spacing-24;
+}

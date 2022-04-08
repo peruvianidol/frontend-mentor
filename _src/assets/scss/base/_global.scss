@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: $font-family-sans;
+  line-height: $line-height-medium;
+  color: $color-text-default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
